@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Video from './Video';
 import './App.css';
 
-const url = 'http://localhost:4000/twitter';
+const url = 'https://get-twitter-video.herokuapp.com/twitter';
 
 function App() {
   const [twitterId, setTwitterId] = useState('');
@@ -22,10 +22,8 @@ function App() {
   console.log(videoData);
   return (
     <div className='App'>
-      <div>
-        {videoData ? <Video videoUrl={videoData} /> : null}
-      </div>
-     
+      <div>{videoData ? <Video videoUrl={videoData} /> : null}</div>
+
       <div className='formContainer'>
         <form className='form'>
           <input
